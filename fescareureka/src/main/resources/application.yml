@@ -1,0 +1,13 @@
+server:
+  port: 8089
+spring:
+  application:
+    name: fescar-eureka
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://localhost:${server.port}/eureka/
+
+

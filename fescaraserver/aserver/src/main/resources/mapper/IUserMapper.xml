@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lzx.aserver.mapper.IUserMapper">
+    <resultMap id="userMap" type="com.lzx.aserver.po.UserPO">
+        <id column="id" property="id"/>
+        <result column="name" property="name"/>
+        <result column="age" property="age"/>
+    </resultMap>
+
+    <insert id="addUser" useGeneratedKeys="true">
+        insert into user(name,age) values(#{name},#{age})
+    </insert>
+
+    <select id="getUserList" resultMap="userMap">
+        select * from user
+    </select>
+</mapper>

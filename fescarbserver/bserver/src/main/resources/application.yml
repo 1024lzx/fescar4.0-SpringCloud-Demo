@@ -1,0 +1,18 @@
+server:
+  port: 8092
+spring:
+  application:
+    name: fescar-bserver
+  datasource:
+    url: jdbc:mysql://localhost:3306/fescardemo2?useSSL=false&useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&serverTimezone=Asia/Shanghai
+    username: root #ENC(bJepHnZWnx+4BZy1CtsBTA==)
+    password: 1994 #ENC(WG3bED3Hj4cGycNBxJHMEA==)
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8089/eureka/
+jasypt:
+  encryptor:
+    password: lzx
